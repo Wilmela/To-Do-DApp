@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Open+Sans:wght@600&display=swap');
+:root{
+  --primary-color: #000000ef;
+  --secondary-color: #000000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Open Sans', sans-serif;
+  background: var(--primary-color);
+}
+
+.header{
+  background: var(--secondary-color);
+}
+
+.white-glassmorphism{
+    backdrop-filter: blur(5px);
+    background: rgba(255,255,255,0.28);
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}

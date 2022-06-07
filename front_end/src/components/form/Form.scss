@@ -1,0 +1,119 @@
+:root{
+  --primary-color: #000000;
+  --secondary-color: #303030;
+  --accent-color: #B8323B;
+}
+
+h1{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    margin-top:8rem;
+    font-size: 3.5rem;
+    &:hover{
+        transform: scale(1.1);
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 5rem;
+        margin-bottom: .5rem;
+    }
+    
+}
+h3,h4, .account{
+    color: #fff;
+    text-align: center;
+}
+.account{
+    font-style: italic; 
+    font-weight: 200;
+    margin-top: .5rem;
+}
+.form-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+
+    form{
+        // background: var(--secondary-color);
+        padding: 2rem;
+        border-radius: .5rem;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        &:hover{
+            background: #2120204a;
+        }
+
+        input{
+            padding: 1rem;
+            width: 100%;
+            margin-bottom: .8rem;
+            border-radius: .5rem;
+            border: none;
+            cursor: pointer;
+            &:hover{
+                background: #ccc;
+            }
+        }
+        button{
+            color: #ffff;
+            background: var(--accent-color);
+            padding: .7rem;
+            border-radius: .5rem;
+            margin-bottom: .5rem;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: larger;
+            &:hover{
+            background: #dc3f49;
+            }
+        }
+        @media screen and (min-width: 640px) {
+                width: 60%;
+            }
+    }
+}
+
+
+.loader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading{
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.task-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom:4rem;
+
+    @media screen and (min-width: 640px) {
+        width: 63%;
+    }
+}
