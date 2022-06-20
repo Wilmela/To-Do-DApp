@@ -28,11 +28,11 @@ export function TaskContextProvider({ children }) {
         const contract = getEthereumContract();
         const contractTasks = await contract.getTasks();
 
-        const structuredTask = contractTasks.map((task) => ({
+        const structuredTask = await Promise.all(contractTasks.map((task) => ({
           id: task.id.toNumber(),
           title: task.title,
           finished: task.finished,
-        }));
+        })));
 
         setTasks(structuredTask);
       } else {
@@ -115,8 +115,7 @@ export function TaskContextProvider({ children }) {
     try {
       if (ethereum) {
         const contract = getEthereumContract();
-        const taskId = id;
-        const finish = await contract.toggleTask(taskId);
+        const finish = await contract.toggleTask(id);
         await finish.wait();
 
         window.location.reload();

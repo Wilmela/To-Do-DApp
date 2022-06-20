@@ -32,7 +32,7 @@ contract Tasks {
 
     function editTask(uint256 _id, string memory _title) public {
         require(owner == msg.sender);
-        for (uint256 i = 0; i <= tasks.length - 1; i++) {
+        for (uint256 i = 0; i < tasks.length; i++) {
             if (tasks[i].id == _id) {
                 tasks[i].title = _title;
                 break;
@@ -42,7 +42,7 @@ contract Tasks {
     }
 
     function toggleTask(uint256 _id) public {
-        for (uint256 i = 0; i <= tasks.length - 1; i++) {
+        for (uint256 i = 0; i < tasks.length; i++) {
             if (tasks[i].id == _id) {
                 tasks[i].finished = !tasks[i].finished;
                 break;
